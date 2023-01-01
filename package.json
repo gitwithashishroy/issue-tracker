@@ -1,0 +1,15 @@
+{
+  "name": "issue-tracker",
+  "version": "1.0.0",
+  "description": "A project to track issue of the project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ashish roy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
