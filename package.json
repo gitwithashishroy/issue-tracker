@@ -4,12 +4,17 @@
   "description": "A project to track issue of the project",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon start index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ashish roy",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
     "mongoose": "^6.8.2",
     "nodemon": "^2.0.20"
   }

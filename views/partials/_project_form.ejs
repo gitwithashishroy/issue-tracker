@@ -1,0 +1,35 @@
+<div class="create-container">
+
+  <h2>
+    Create New Project
+  </h2>
+
+
+  <div class="create-form-container">
+
+    <form class="" action="/project/create" method="POST">
+
+      <label for="namelabel">Name</label>
+
+      <input type="text" name="name" placeholder="Name of your project" required class="field" id="namelabel" />
+      
+
+      <div class="field-textarea">
+        <label for="project-description">Description</label>
+        <textarea name="description" placeholder="Write something about your project..." required
+          id="project-description"></textarea>
+      </div>
+
+
+      <label for="authorlabel" class="">Author</label>
+      <input type="text" name="author" placeholder="Author" required />
+
+
+      <input type="submit" value="Create Project" />
+
+    </form>
+
+  </div>
+
+
+</div>

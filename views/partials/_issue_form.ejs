@@ -1,0 +1,56 @@
+<div id="box">
+
+  <button id="button">click here to create issue </button>
+
+  <form action="/project/issue/<%= project._id %>" method="post" autocomplete="off">
+
+    <label for="titlelabel">Title</label>
+
+    <input type="text" name="title" placeholder="Title" id="titlelabel" />
+
+    <label for="author">Author</label>
+
+    <input type="text" name="author" placeholder="Author" id="author" />
+
+
+    <label for="labelinput">Label</label>
+    <!-- <input type="text" name="label" placeholder="label" id="labelinput" /> -->
+
+    <input type="text" list="labels" name="label" value="" placeholder="label">
+    <datalist id="labels">
+
+      <% for (let i=0; i < project.labels.length; i++) { %>
+
+        <option value="<%= project.labels[i] %>">
+
+          <% } %>
+
+            <!-- <option value="frontend">
+          <option value="backend">
+          <option value="api">
+          <option value="nodejs">
+          <option value="ejs"> -->
+
+            
+    </datalist>
+
+
+    <div class="field-textarea">
+      <label for="issue-description">Description </label>
+
+      <textarea name="description" placeholder="Describe your issue..." required id="issue-description"></textarea>
+
+    </div>
+
+    <input type="submit" value="Create Issue" />
+    <!-- <button type="submit"> create issue </button> -->
+
+  </form>
+
+</div>
+
+
+
+<script>
+
+</script>

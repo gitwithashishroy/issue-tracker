@@ -1,0 +1,113 @@
+<h3> All Issues related to above Project </h3>
+
+
+
+<div class="issue-filter-list">
+
+  <div class="issue-list-container">
+
+
+    <div class="issue-search-container">
+
+      <form class="search-form" action="/project/<%= project._id %>?search=titleAuthor" method="GET">
+        <input type="text" name="titleAuthor" placeholder="Search by Title or Author" id="titleAuthor" />
+        <input type="submit" value="Search Issue" />
+      </form>
+    
+      <form action="/project/<%= project._id %>?search=titleAuthor" method="GET">
+        <input class="all-issue-btn" type="submit" value="All Issue" />
+      </form>
+    
+
+    </div>
+
+    <div class="all-issue">
+
+      <div class="issue-header">
+        <div class="issue-header-title">Title</div>
+        <div class="issue-header-author">Author</div>
+        <div class="issue-header-label">Label</div>
+        <div class="issue-header-desc">Description</div>
+      </div>
+
+      <% for (let i=0; i < products.length; i++) { %>
+        <div class="product" data-title="<%= products[i].title %>" data-author="<%= products[i].author %>"
+          data-label="<%= products[i].label %>">
+
+          <div class="product-title">
+            <%= products[i].title %>
+          </div>
+          <div class="product-author">
+            <%= products[i].author %>
+          </div>
+          <div class="product-label">
+            <%= products[i].label %>
+          </div>
+          <div class="product-desc">
+            <%= products[i].description %>
+          </div>
+
+        </div>
+        <% } %>
+
+    </div>
+
+  </div>
+
+  <div class="issue-filter-container">
+
+    <div class="filter-header">
+      Filter by Labels
+    </div>
+
+    <form id="filter-form">
+       
+      <% for (let i=0; i < project.labels.length; i++) { %>
+
+          <div class="label-checkbox">
+            <div class="filter-label">
+              <label for="<%= project.labels[i] %>"> <%= project.labels[i] %> </label>
+             </div>
+             <div class="filter-checkbox">
+              <input type="checkbox" id="<%= project.labels[i] %>" name="categories" value="<%= project.labels[i] %>" onchange="filter()">
+             </div>
+          </div>
+ 
+        <% } %>
+    </form>
+
+  </div>
+
+
+</div>
+
+<script>
+
+  function filter() {
+    console.log("filter is called");
+    // Get the selected categories
+    const categories = [...document.querySelectorAll('input[name="categories"]:checked')].map(c => c.value);
+    console.log(categories);
+
+    // Get all the products
+    const products = document.querySelectorAll('.product');
+    console.log(products);
+
+    // hide all product when  
+    if (categories.length !== 0) {
+      products.forEach(p => { p.style.display = 'none' });
+    } else {
+      products.forEach(p => p.style.display = 'flex');
+    }
+
+    // Show the products that match the selected categories
+    products.forEach(p => {
+      console.log(p);
+      //    console.log(p.dataset) ; 
+      if (categories.includes(p.dataset.title) || categories.includes(p.dataset.author) || categories.includes(p.dataset.label)) {
+        p.style.display = 'flex';
+      }
+    });
+  }
+
+</script>

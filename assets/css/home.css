@@ -1,0 +1,142 @@
+
+
+
+:root{
+  --dark : #2b2d42;
+  --light : #adb5bd ; 
+  --border : #dee2e6;
+  --border-btn : #edf2f4 ; 
+}
+
+.home-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 5em ;
+}
+
+.create-container{
+  width: 40%;
+}
+
+h2 {
+  width: fit-content;
+  margin: auto;
+}
+
+.create-form-container {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin-top: 30px;
+}
+
+
+.create-form-container input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+  
+  .create-form-container input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px ;
+    font-weight: 600;
+  }
+  
+  .create-form-container input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .create-form-container .field-textarea{
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .create-form-container textarea{
+    border: 1px solid #ccc;
+    padding: 12px 20px ;
+    font-size: larger;
+    width:95%;
+    resize: vertical;
+    overflow:hidden ; 
+  }
+
+  .all-project{
+    width: 50%;
+  }
+
+ .all-project table{
+    border-spacing: 0px ;
+    width: 100%;
+    background-color: #f2f2f2;
+  }
+
+.table td , .table th{
+    padding: .75em;
+    vertical-align: top ;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.table td > a.btn{
+padding: 0.3em 1em;
+font-size: 1.1 em ;
+margin: 0em .2em;
+}
+
+.table tr:hover{
+    background-color: rgb(184, 216, 206);
+}
+
+.table tr:hover td>a{
+    box-shadow: none;
+} 
+
+.table .thead-dark th{
+color: white ;
+background-color: var(--dark);
+border-color: #32383e ;
+}
+
+.oneLine {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+@media only screen and (max-width : 600px ){
+  .all-project table,thead ,tbody , th , td , tr {
+        display: block;
+    }
+
+   .all-project thead tr{
+        position : absolute ; 
+        top: -9999px;
+        left: -9999px ; 
+    }
+
+   .all-project tr{
+        border: 1px solid var(--border);
+    }
+
+   .all-project td{
+        border: none ;
+        /* border-bottom: 1px solid  var(--border); */
+        position: relative ; 
+    }
+}
+
+

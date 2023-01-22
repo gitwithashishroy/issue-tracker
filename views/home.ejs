@@ -1,0 +1,47 @@
+<div class="home-container">
+  <%- include('./partials/_project_form') ; %>
+
+    <div class="all-project">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name Of The Project</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let i=0 ; i < projects.length ; i++){ %>
+
+            <tr>
+              <td>
+                <%= i+1 %>
+              </td>
+              <td>
+                <%= projects[i].name %>
+              </td>
+              <td>
+                <%= projects[i].author %>
+              </td>
+              <td class="">
+                <%= projects[i].description %>
+              </td>
+
+              <td>
+                <a href="/project/<%=projects[i]._id%>" class=""> Open project
+                </a>
+              </td>
+            </tr>
+
+            <% } %>
+
+        </tbody>
+      </table>
+
+
+    </div>
+
+
+</div>

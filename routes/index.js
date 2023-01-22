@@ -1,10 +1,11 @@
-const express = require('express'); 
-const router = express.Router() ; 
+const express = require('express');
+const router = express.Router();
+const homeController = require('../controllers/home_controller');
+
+console.log('router loaded');
+
+router.get('/', homeController.home);
+router.use('/project', require('./project'));
 
 
-router.get('/' , (req , res)=>{
-    res.send("server is running pls code your project") ; 
-}) ; 
-
-
-module.exports = router ; 
+module.exports = router;

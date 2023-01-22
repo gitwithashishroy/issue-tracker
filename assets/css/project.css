@@ -1,0 +1,272 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-container {
+  width: 80%;
+  margin: auto;
+}
+
+.project-header {
+  margin: 20px auto;
+  color: blue;
+}
+
+.project-author {
+  color: green;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 20px 10px 20px;
+  background-color: azure;
+  border-radius: 5px;
+}
+
+.project-description {
+  background-color: lavender;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px 20px 20px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* create issue container */
+
+/* create  issue  form container */
+.create-issue-container{
+  width: 100%;
+}
+
+#box{
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin-top: 30px;
+}
+
+#button {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  background-color: coral;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 20px ;
+}
+
+#box form {
+  display: none;
+}
+
+.create-issue-container input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.create-issue-container input[type="submit"] {
+  width: 100%;
+  background-color: #45a049;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.create-issue-container input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.create-issue-container .field-textarea {
+  width: 100%;
+  overflow: hidden;
+}
+
+.create-issue-container textarea {
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  font-size: larger;
+  width: 95%;
+  resize: vertical;
+  overflow: hidden;
+}
+
+.create-issue-container .labelinput {
+  width: 100%;
+  border-radius: 4px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.labelinput select {
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: none;
+  margin-left: -30px;
+}
+
+
+
+/* all issue list container */
+.issue-container {
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+}
+
+/* search container */
+.issue-search-container{
+  display: flex;
+  margin:10px ;
+  justify-content: space-between;
+}
+
+.issue-search-container input[type="submit"]{
+   border: none;
+   padding: 10px ;
+   background-color: rgb(248, 206, 154);
+   font-weight: 600;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+
+.issue-search-container input[type="text"]{
+  padding: 10px ;
+  font-weight: 600;
+  cursor: pointer;
+  border-color:#45a049;
+  border-radius: 5px;
+  width: 70%;
+  margin-right: 10px ;
+}
+
+
+.search-form{
+  display: flex;
+}
+
+
+.issue-filter-list{
+  display: flex ;
+  /* border: 2px solid rgb(238, 202, 202); */
+}
+
+.issue-list-container{
+  width: 70%;
+  /* border: 2px solid black; */
+  padding: 10px ;
+  /* border-right: 2px solid grey; */
+}
+ 
+
+.issue-header{
+  display: flex;
+  font-size: 18px ;
+  font-weight: 700;
+  border-bottom: 2px solid coral ;
+  padding: 10px ;
+  margin: 5px ;
+  background-color: rgb(201, 225, 245);
+}
+
+.issue-header-title{
+  width: 20%;
+}
+
+.issue-header-author{
+  width: 20%;
+}
+
+.issue-header-label{
+  width: 20%;
+}
+
+.issue-header-desc{
+  width: 40%;
+}
+
+
+
+.product{
+  display: flex;
+  flex-direction: row;
+  padding: 10px ;
+  background-color: aliceblue;
+  margin: 5px ;
+}
+
+.product-title{
+  width: 20%;
+}
+.product-author{
+  width: 20%;
+}
+.product-label{
+  width: 20%;
+}
+.product-desc{
+  width: 40%;
+}
+
+
+
+
+
+/* filter container */
+
+.issue-filter-container{
+  /* border: 2px solid black; */
+  width: 30%;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+.filter-header{
+  margin: auto;
+  width: 80%;
+  margin-top:20px ;
+  font-weight: 600;
+}
+
+#filter-form{
+  margin: auto;
+  width: 80%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.label-checkbox{
+  display: flex;
+  /* border: 2px solid black; */
+}
+
+.filter-label{
+  width: 50%;
+}
+

@@ -1,8 +1,10 @@
 const mongoose = require('mongoose') ; 
-const uri = "mongodb+srv://ashish_cluster:ashish12345@cluster0.difplbp.mongodb.net/?retryWrites=true&w=majority"; 
+
+const uri = process.env.DATABASE; 
 
 try {
   // Connect to the MongoDB cluster
+  mongoose.set('strictQuery', false);
   mongoose.connect(
     uri,
     { useNewUrlParser: true, useUnifiedTopology: true },
