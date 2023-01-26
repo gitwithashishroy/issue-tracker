@@ -6,7 +6,7 @@ try {
   // Connect to the MongoDB cluster
   mongoose.set('strictQuery', false);
   mongoose.connect(
-    uri,
+    uri ,
     { useNewUrlParser: true, useUnifiedTopology: true },
     () => console.log("Mongoose is connected"),
   );

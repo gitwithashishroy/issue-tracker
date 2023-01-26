@@ -1,12 +1,12 @@
 const express = require('express') ;
 const app = express() ; 
-const port = 8000 ; 
 const dotenv = require('dotenv') ; 
+dotenv.config() ;
 const db = require('./config/mongoose') ; 
 const bodyParser = require('body-parser');
 const expressLayouts = require("express-ejs-layouts");
 
-dotenv.config() ;
+const port = process.env.PORT || 8000 ; 
 
 
 // support parsing of application/json type post data
